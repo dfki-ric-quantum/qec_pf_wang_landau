@@ -1,0 +1,5 @@
+function(configure_cuda target_name)
+    set_property(TARGET ${target_name} PROPERTY CUDA_SEPARABLE_COMPILATION ON)
+    set_property(TARGET ${target_name} PROPERTY CUDA_ARCHITECTURES 80 86 89)
+    target_compile_options(${target_name} PRIVATE -lineinfo -std=c++20)
+endfunction()

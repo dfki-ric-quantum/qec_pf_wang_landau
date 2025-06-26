@@ -1,0 +1,5 @@
+tags
+build/
+.cache/
+compile_commands.json
+src/git_info/git_info.cpp

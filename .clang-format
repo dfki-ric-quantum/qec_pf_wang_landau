@@ -1,0 +1,15 @@
+---
+Language:        Cpp
+BasedOnStyle: Mozilla
+ColumnLimit: 120
+AllowShortCaseLabelsOnASingleLine: true
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+Cpp11BracedListStyle: true
+IndentRequiresClause: true
+InsertBraces: true
+IncludeBlocks: Preserve
+KeepEmptyLinesAtTheStartOfBlocks: false
+PenaltyReturnTypeOnItsOwnLine: 200
+SortIncludes: true
+Standard: c++20
