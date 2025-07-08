@@ -20,11 +20,12 @@ Libraries:
 Build:
 
 * cmake, 3.20 or newer
-* gcc 13 is tested, clang 17 should work. Newer versions of both as well. msvc should work as well,
-    for recent versions
+* A C++ compiler that supports C++20, gcc 13 is tested, clang 17 should work. Newer versions of both as well.
+    msvc should work, for recent versions, but was not tested
 * make or ninja should both be fine as generators
 
-Code is compiled for C++20 and CUDA architectures 80 (A100) and 86 (All Ampere cards, e.g. RTX A6000).
+Code is compiled for C++20 and CUDA architectures 60, which requires a NVIDIA Tesla P100 or GTX 10
+series or any newer card. Older GPUs are not supported.
 
 ## Build
 
@@ -37,8 +38,8 @@ make -j 8
 The number after `-j` indicates the number of parallel compilations `make` starts.
 
 Currently two programs are created:
-* `build/src/prerun` is the pre-run, build from the new code
-* `build/src/mainrun` is the main run, build from the new code (WIP).
+* `build/src/prerun` is the pre-run
+* `build/src/mainrun` is the main run
 
 ## Usage
 The Wang-Landau simulation is performed in two stages: the pre-run and the main run.
